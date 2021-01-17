@@ -1,6 +1,8 @@
-<div id="introduction">
-  hello, my name is
-  <div id="name">tommy huang.</div>
+<div class={$$props.class}>
+  <div id="introduction">
+    hello, my name is
+    <div id="name">tommy huang.</div>
+  </div>
 </div>
 
 <style>
