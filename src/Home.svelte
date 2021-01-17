@@ -1,0 +1,19 @@
+<div id="introduction">
+  hello, my name is
+  <div id="name">tommy huang.</div>
+</div>
+
+<style>
+  #introduction {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    transform: translate(-50%, -50%);
+    color: #000000;
+  }
+  #name {
+    font-size: 80px;
+  }
+</style>
