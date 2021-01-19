@@ -1,26 +1,29 @@
-<script>
-  import { flip } from "svelte/animate";
-</script>
-
-<div id="nav">
-  <ul>
-    <li><a href="#about">about</a></li>
-    <li>projects</li>
-  </ul>
-</div>
+<nav id="nav">
+  <div>
+    <a href="#about" target="_self">about</a>
+    <a href="#projects">projects</a>
+  </div>
+</nav>
 
 <style>
   #nav {
-    position: static;
-  }
-  ul {
-    list-style-type: none;
+    position: fixed;
     margin: 0;
     padding: 0;
-    text-align: center;
+    z-index: 1;
+    width: 100%;
+    height: 3rem;
   }
-  li {
-    display: inline;
-    font-family: "Poppins", sans-serif;
+  #nav div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    margin: auto 5px;
   }
 </style>
