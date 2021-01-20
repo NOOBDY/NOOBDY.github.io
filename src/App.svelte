@@ -3,6 +3,7 @@
   import Home from "./Home.svelte";
   import NavBar from "./NavBar.svelte";
   import About from "./About.svelte";
+  import Projects from "./Projects.svelte";
 </script>
 
 <main class="container">
@@ -12,6 +13,7 @@
   <NavBar />
   <Home class="section" />
   <About class="section" />
+  <Projects class="section" />
 </main>
 
 <style>
@@ -32,5 +34,8 @@
     width: 100%;
     height: 100vh;
     scroll-snap-align: start;
+  }
+  :global(.header) {
+    font-size: 60px;
   }
 </style>
