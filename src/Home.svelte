@@ -1,4 +1,4 @@
-<div class={$$props.class}>
+<div class={$$props.class} id="home">
   <div id="introduction">
     hello, my name is
     <div id="name">tommy huang.</div>
