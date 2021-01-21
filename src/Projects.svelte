@@ -1,3 +1,3 @@
-<div class={$$props.class}>
-  <h1 class="header">Projects</h1>
+<div class={$$props.class} id="projects">
+  <h1 class="title">projects</h1>
 </div>
