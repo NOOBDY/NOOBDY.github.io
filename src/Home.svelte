@@ -11,7 +11,6 @@
     top: 50%;
     left: 30%;
     font-size: 50px;
-    font-family: "Poppins", sans-serif;
     transform: translate(-50%, -50%);
     color: #000000;
   }
