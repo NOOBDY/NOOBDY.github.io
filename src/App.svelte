@@ -1,51 +1,42 @@
-<main>
-  <div id="description">
-    <h1>Hi! This is my GitHub Page</h1>
-    <h2>This site is still under development</h2>
-    <p>
-      View my profile and other projects
-      <a href="https://github.com/NOOBDY">here</a>
-    </p>
-  </div>
-  <div id="bg-text">Work In Progress...</div>
+<script>
+  import WIP from "./WIP.svelte";
+  import Home from "./Home.svelte";
+  import NavBar from "./NavBar.svelte";
+  import About from "./About.svelte";
+  import Projects from "./Projects.svelte";
+
+  let shown = false;
+</script>
+
+<main class="container">
+  {#if !shown}
+    <WIP class="section" bind:shown />
+  {/if}
+  {#if shown}
+    <NavBar />
+    <Home class="section" />
+    <About class="section" />
+    <Projects class="section" />
+  {/if}
 </main>
 
 <style>
-  #description {
-    text-align: center;
-    margin-top: 4rem;
+  main {
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
   }
-
-  #description h1 {
-    font-size: 5vmin;
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
   }
-
-  #description h2 {
-    font-size: 4vmin;
-  }
-
-  #description p {
-    font-size: 3vmin;
-  }
-
-  #bg-text {
-    /* center text */
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    /* font */
-    font-size: 5vw;
-    font-family: "PT Mono", monospace;
-    white-space: nowrap;
-    color: #b6b6b6;
-
-    /* unselectable */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  .container :global(.section) {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
   }
 </style>
