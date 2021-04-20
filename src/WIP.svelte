@@ -6,6 +6,8 @@
   let dispatch = createEventDispatcher();
   let counter = 0;
 
+  console.log("click around to discover something!");
+
   function show() {
     counter++;
     if (counter === 3) {
@@ -27,10 +29,9 @@
     </p>
   </div>
   <div id="bg-text">
-    <p on:click={show}>work in progress</p>
-    {#if counter >= 1}<p>.</p>{/if}
-    {#if counter >= 2}<p>.</p>{/if}
-    {#if counter >= 3}<p>.</p>{/if}
+    <p on:click={show}>
+      work in progress{#if counter >= 1}.{/if}{#if counter >= 2}.{/if}{#if counter >= 3}.{/if}
+    </p>
   </div>
 </div>
 
