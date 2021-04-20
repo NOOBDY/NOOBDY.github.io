@@ -4,16 +4,20 @@
   import NavBar from "./NavBar.svelte";
   import About from "./About.svelte";
   import Projects from "./Projects.svelte";
+
+  let shown = false;
 </script>
 
 <main class="container">
-  <!--
-  <WIP />
-  -->
-  <NavBar />
-  <Home class="section" />
-  <About class="section" />
-  <Projects class="section" />
+  {#if !shown}
+    <WIP class="section" bind:shown />
+  {/if}
+  {#if shown}
+    <NavBar />
+    <Home class="section" />
+    <About class="section" />
+    <Projects class="section" />
+  {/if}
 </main>
 
 <style>
