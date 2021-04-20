@@ -6,14 +6,6 @@
 </div>
 
 <style>
-  /*#introduction {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    font-size: 3.5vw;
-    transform: translate(-50%, -50%);
-    color: #000000;
-  }*/
   #home {
     display: flex;
     justify-content: left;
