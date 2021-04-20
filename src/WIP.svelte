@@ -4,10 +4,16 @@
   export let shown = false;
 
   let dispatch = createEventDispatcher();
+  let counter = 0;
 
   function show() {
-    shown = !shown;
-    dispatch("show", shown);
+    counter++;
+    if (counter === 3) {
+      setTimeout(() => {
+        shown = true;
+        dispatch("show", shown);
+      }, 1000);
+    }
   }
 </script>
 
@@ -21,7 +27,10 @@
     </p>
   </div>
   <div id="bg-text">
-    <p on:click={show}>work in progress...</p>
+    <p on:click={show}>work in progress</p>
+    {#if counter >= 1}<p>.</p>{/if}
+    {#if counter >= 2}<p>.</p>{/if}
+    {#if counter >= 3}<p>.</p>{/if}
   </div>
 </div>
 
@@ -52,6 +61,5 @@
     font-family: "PT Mono", monospace;
     white-space: nowrap;
     color: #b6b6b6;
-    margin-left: 2.5rem;
   }
 </style>
