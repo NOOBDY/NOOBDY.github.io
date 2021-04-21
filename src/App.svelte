@@ -10,7 +10,7 @@
 
 <main class="container">
   {#if !shown}
-    <WIP class="section" bind:shown />
+    <WIP bind:shown />
   {/if}
   {#if shown}
     <NavBar />
@@ -34,6 +34,9 @@
     scroll-snap-type: y mandatory;
   }
   .container :global(.section) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
     height: 100vh;
