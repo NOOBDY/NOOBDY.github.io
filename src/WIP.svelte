@@ -20,10 +20,10 @@
 </script>
 
 <div class={$$props.class} id="wip">
-  <div id="description">
-    <h1>Hi! This is my GitHub Page</h1>
-    <h2>This site is still under development</h2>
-    <p>
+  <div style="text-align: center;">
+    <h1 style="font-size: 5vmin">Hi! This is my GitHub Page</h1>
+    <h2 style="font-size: 4vmin;">This site is still under development</h2>
+    <p style="font-size: 3vmin;">
       View my profile and other projects
       <a href="https://github.com/NOOBDY">here</a>
     </p>
@@ -36,18 +36,6 @@
 </div>
 
 <style>
-  #description {
-    text-align: center;
-  }
-  #description h1 {
-    font-size: 5vmin;
-  }
-  #description h2 {
-    font-size: 4vmin;
-  }
-  #description p {
-    font-size: 3vmin;
-  }
   #bg-text {
     display: flex;
     justify-content: center;
