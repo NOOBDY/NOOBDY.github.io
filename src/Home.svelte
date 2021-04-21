@@ -7,9 +7,7 @@
 
 <style>
   #home {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    transform: translateX(-20%);
   }
   #introduction {
     font-size: 3.5vw;
