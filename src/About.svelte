@@ -1,45 +1,30 @@
 <div class={$$props.class} id="about">
-  <div>
-    <h1 class="title">about me</h1>
-    <p class="subtitle">
-      i like to watch movies,<br />
-      solve problems,<br />
-      and build cool stuff.
+  <left>
+    <h1 style="font-size: 8vw;">about me</h1>
+    <p style="font-size: 4vw;">I'm a person</p>
+  </left>
+  <right>
+    <p id="content">
+      Insert<br />
+      Placeholder<br />
+      Here
     </p>
-    <p class="content">
-      i have been writing code since 15, lorem ipsum dolor sit amet, consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. duis aute irure dolor in
-      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-      pariatur. excepteur sint occaecat cupidatat non proident, sunt in culpa
-      qui officia deserunt mollit anim id est laborum.
-    </p>
-  </div>
+  </right>
 </div>
 
 <style>
-  .title {
-    font-size: 150px;
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+  #about * {
+    margin: 0 0.5vw;
   }
-  .subtitle {
-    font-size: 40px;
-    position: absolute;
+  left {
     text-align: right;
-    top: 50%;
-    left: 32%;
-    transform: translate(-50%, -50%);
+    width: 55vw;
   }
-  .content {
-    font-size: 25px;
-    text-align: left;
-    position: absolute;
-    top: 43%;
-    left: 65%;
-    transform: translate(-50%, -50%);
+  right {
+    width: 45vw;
+  }
+  right p {
+    font-size: 2vw;
+    flex-wrap: wrap;
   }
 </style>
