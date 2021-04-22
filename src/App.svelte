@@ -5,7 +5,7 @@
   import About from "./About.svelte";
   import Projects from "./Projects.svelte";
 
-  let shown = true;
+  let shown = false;
 </script>
 
 <main class="container">
