@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import { scrollToEl } from "./functions";
 
   export let shown = false;
 
@@ -11,16 +12,18 @@
   function show() {
     counter++;
     if (counter === 3) {
+      shown = true;
+      dispatch("show", shown);
+
       setTimeout(() => {
-        shown = true;
-        dispatch("show", shown);
+        scrollToEl("home");
       }, 1000);
     }
   }
 </script>
 
 <div class={$$props.class} id="wip">
-  <div style="text-align: center;">
+  <div id="description">
     <h1 style="font-size: 5vmin">Hi! This is my GitHub Page</h1>
     <h2 style="font-size: 4vmin;">This site is still under development</h2>
     <p style="font-size: 3vmin;">
@@ -36,17 +39,19 @@
 </div>
 
 <style>
+  #description {
+    position: absolute;
+    margin-bottom: 60vh;
+    text-align: center;
+  }
   #bg-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
   }
   #bg-text p {
-    font-size: 5vw;
+    font-size: 6vw;
     font-family: "PT Mono", monospace;
     white-space: nowrap;
     color: #b6b6b6;

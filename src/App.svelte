@@ -5,13 +5,11 @@
   import About from "./About.svelte";
   import Projects from "./Projects.svelte";
 
-  let shown = false;
+  let shown = true;
 </script>
 
 <main class="container">
-  {#if !shown}
-    <WIP bind:shown />
-  {/if}
+  <WIP class="section" bind:shown />
   {#if shown}
     <NavBar />
     <Home class="section" />
