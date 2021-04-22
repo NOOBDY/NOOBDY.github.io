@@ -1,8 +1,5 @@
 <script>
-  function scrollToEl(id) {
-    var element = document.getElementById(id);
-    element.scrollIntoView();
-  }
+  import { scrollToEl } from "./functions";
 </script>
 
 <nav id="nav">
