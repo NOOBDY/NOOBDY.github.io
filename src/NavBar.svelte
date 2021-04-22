@@ -1,8 +1,5 @@
 <script>
-  function scrollToEl(id) {
-    var element = document.getElementById(id);
-    element.scrollIntoView();
-  }
+  import { scrollToEl } from "./functions";
 </script>
 
 <nav id="nav">
@@ -15,24 +12,24 @@
 
 <style>
   #nav {
-    position: fixed;
+    display: block;
+    position: sticky;
+    top: 2vh;
     margin: 0;
     padding: 0;
     z-index: 1;
-    width: 100%;
     height: 3rem;
   }
   #nav ul {
+    text-align: center;
+    padding: 0;
+    transform: translateX(20%);
     list-style-type: none;
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
   }
   li {
     display: inline;
     color: #000000;
-    font-size: 20px;
+    font-size: 1.6vmax;
     margin: auto 5px;
     cursor: pointer;
   }
