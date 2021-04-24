@@ -17,7 +17,7 @@
 
       setTimeout(() => {
         scrollToEl("home");
-      }, 1000);
+      }, 200);
     }
   }
 </script>
