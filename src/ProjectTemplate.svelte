@@ -1,7 +1,3 @@
-<script>
-    import Projects from "./Projects.svelte";
-</script>
-
 <div class="project">
     <a href={$$props.github_src}>
         <img src={$$props.img_src} alt="" />
