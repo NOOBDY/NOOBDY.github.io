@@ -1,13 +1,15 @@
 <script>
   import { scrollToEl } from "./functions";
+
+  let navBarItems = ["home", "about", "projects"];
 </script>
 
 <nav id="nav">
-  <ul>
-    <li on:click={() => scrollToEl("home")}>home</li>
-    <li on:click={() => scrollToEl("about")}>about</li>
-    <li on:click={() => scrollToEl("projects")}>projects</li>
-  </ul>
+  <div id="items">
+    {#each navBarItems as item}
+      <p class="item" on:click={() => scrollToEl(item)}>{item}</p>
+    {/each}
+  </div>
 </nav>
 
 <style>
@@ -20,14 +22,15 @@
     z-index: 1;
     height: 3rem;
   }
-  #nav ul {
+  #items {
+    display: flex;
+    justify-content: center;
     text-align: center;
     padding: 0;
     transform: translateX(20%);
     list-style-type: none;
   }
-  li {
-    display: inline;
+  .item {
     color: #000000;
     font-size: 1.6vmax;
     margin: auto 5px;
