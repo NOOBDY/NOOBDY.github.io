@@ -5,13 +5,8 @@
 
 <div class={$$props.class} id="projects">
   <h1 class="title">projects</h1>
-  <div>
-    <ProjectTemplate
-      title={DiscordBot.title}
-      p={DiscordBot.description}
-      img_src={DiscordBot.img_src}
-      github_src={DiscordBot.github}
-    />
+  <div id="project-list">
+    <ProjectTemplate project={DiscordBot} />
   </div>
 </div>
 
@@ -21,5 +16,10 @@
     font-size: 6vmin;
     margin-right: 50vw;
     margin-bottom: 70vh;
+  }
+  #project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 </style>
