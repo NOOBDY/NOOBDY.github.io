@@ -4,22 +4,18 @@
 </script>
 
 <div class={$$props.class} id="projects">
-  <h1 class="title">projects</h1>
-  <div id="project-list">
+  <div class="wrapper">
+    <h1 style="font-size: 6vmin;">projects</h1>
+    <ProjectTemplate project={DiscordBot} />
     <ProjectTemplate project={DiscordBot} />
   </div>
 </div>
 
 <style>
-  .title {
-    position: absolute;
-    font-size: 6vmin;
-    margin-right: 50vw;
-    margin-bottom: 70vh;
-  }
-  #project-list {
+  .wrapper {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 50vw;
+    margin-top: 10vh;
   }
 </style>
