@@ -1,33 +1,36 @@
 <script>
     const project = $$props.project;
+    let shown = false;
 </script>
 
 <div class="project">
-    <a href={project.github_src}>
-        <img src={project.img_src} alt="" />
-    </a>
-    <h1>{project.title}</h1>
-    <p>{project.description}</p>
+    <h1
+        on:click={() => {
+            shown = !shown;
+        }}
+    >
+        {project.title}
+    </h1>
+    {#if shown}
+        <p>{project.description}</p>
+        <a href={project.github}>view source</a>
+    {/if}
 </div>
 
 <style>
     .project {
-        text-align: center;
         margin: 1rem;
-        width: 20vmax;
-        max-width: 250px;
-    }
-    img {
-        height: 10vmax;
-        width: 10vmax;
-        object-fit: contain;
-        transition: 200ms;
-    }
-    img:hover {
-        transform: scale(150%);
+        height: 30vmin;
+        margin: 2vw 0;
     }
     .project h1 {
-        font-size: 4vmin;
+        font-size: 6vmin;
+        cursor: pointer;
+        margin: 0;
+        transition: 150ms;
+    }
+    .project h1:hover {
+        transform: translateX(5%);
     }
     .project p {
         font-size: 1rem;
