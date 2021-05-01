@@ -1,9 +1,6 @@
 <script>
   import ProjectTemplate from "./ProjectTemplate.svelte";
-  import DiscordBot from "./Projects/DiscordBot";
-  import Game from "./Projects/Game";
-
-  const projects = [DiscordBot, Game];
+  import projects from "./projects";
 </script>
 
 <div class={$$props.class} id="projects">
