@@ -1,13 +1,17 @@
 <script>
   import ProjectTemplate from "./ProjectTemplate.svelte";
   import DiscordBot from "./Projects/DiscordBot";
+  import Game from "./Projects/Game";
+
+  const projects = [DiscordBot, Game];
 </script>
 
 <div class={$$props.class} id="projects">
   <div class="wrapper">
     <h1 style="font-size: 6vmin;">projects</h1>
-    <ProjectTemplate project={DiscordBot} />
-    <ProjectTemplate project={DiscordBot} />
+    {#each projects as project}
+      <ProjectTemplate {project} />
+    {/each}
   </div>
 </div>
 
