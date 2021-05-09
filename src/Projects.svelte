@@ -1,6 +1,8 @@
 <script>
   import ProjectTemplate from "./ProjectTemplate.svelte";
-  import projects from "./projects";
+  import * as json from "./projects.json";
+
+  const projects = json.default;
 </script>
 
 <div class={$$props.class} id="projects">
