@@ -1,6 +1,6 @@
 <script>
   import ProjectTemplate from "./ProjectTemplate.svelte";
-  import projects from "./projects";
+  import projects from "./projects.json";
 </script>
 
 <div class={$$props.class} id="projects">
