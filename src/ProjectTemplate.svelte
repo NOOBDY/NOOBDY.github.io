@@ -1,26 +1,25 @@
 <script>
+    import { slide } from "svelte/transition";
+
     const project = $$props.project;
     let shown = false;
 </script>
 
 <div class="project">
-    <h1
-        on:click={() => {
-            shown = !shown;
-        }}
-    >
+    <h1 on:click={() => (shown = !shown)}>
         {project.title}
     </h1>
     {#if shown}
-        <p>{project.description}</p>
-        <a href={project.github}>view source</a>
+        <div transition:slide>
+            <p>{project.description}</p>
+            <a href={project.github}>view source</a>
+        </div>
     {/if}
 </div>
 
 <style>
     .project {
         margin: 1rem;
-        height: 30vmin;
         margin: 2vw 0;
     }
     .project h1 {
