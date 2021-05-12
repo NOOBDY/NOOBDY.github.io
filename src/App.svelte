@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import WIP from "./WIP.svelte";
   import Home from "./Home.svelte";
   import NavBar from "./NavBar.svelte";

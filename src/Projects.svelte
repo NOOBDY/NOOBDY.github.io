@@ -1,10 +1,6 @@
-<script>
+<script lang="ts">
   import ProjectTemplate from "./ProjectTemplate.svelte";
-  import * as json from "./projects.json";
-
-  // javascript apparently wraps imported json containing arrays
-  // in another object called default for whatever reason
-  const projects = json.default;
+  import projects from "./projects.json";
 </script>
 
 <div class={$$props.class} id="projects">

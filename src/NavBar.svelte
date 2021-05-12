@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { scrollToEl } from "./functions";
 
   let navBarItems = ["home", "about", "projects"];
