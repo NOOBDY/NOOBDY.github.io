@@ -33,7 +33,7 @@
   </div>
   <div id="bg-text">
     <p on:click={show}>
-      work in progress{#if counter >= 1}.{/if}{#if counter >= 2}.{/if}{#if counter >= 3}.{/if}
+      work in progress{#each Array(counter) as _}.{/each}
     </p>
   </div>
 </div>
